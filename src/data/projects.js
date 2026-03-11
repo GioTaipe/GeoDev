@@ -39,7 +39,7 @@ export const projects = [
       es: "KYC en menos de 2 segundos sin documentos ni selfies. TrustGate consulta directamente la red telefónica del operador a través de las APIs de Nokia Network as Code y usa Gemini AI para convertir las señales en un Trust Score 0–100 con explicación en lenguaje natural.",
       en: "KYC in under 2 seconds without documents or selfies. TrustGate directly queries the operator's phone network via Nokia Network as Code APIs and uses Gemini AI to convert the signals into a Trust Score 0–100 with natural language explanation.",
     },
-    technologies: ["Node.js", "Express", "MySQL", "JWT", "Gemini", "React", "API Nokia"],
+    technologies: ["Node.js", "Express", "Gemini", "React", "API Nokia"],
     github: "https://github.com/GioTaipe/trustgate",
     demo: null,
   },
