@@ -2,8 +2,8 @@ export const experience = [
   {
     id: 1,
     role: {
-      es: "Ingeniero de Software en Prácticas",
-      en: "Software Engineer Intern",
+      es: "Programador de Software",
+      en: "Software Developer",
     },
     company: "The Hotels Network",
     duration: "Jun 2023 - Jun 2024",
