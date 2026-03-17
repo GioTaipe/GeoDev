@@ -19,7 +19,7 @@ export const projects = [
     },
     technologies: ["Node.js", "Express", "MongoDB", "JWT", "CLOUD"],
     github: "https://github.com/GioTaipe/blog-project",
-    demo: "https://blog-project-1-wrg1.onrender.com/Login",
+    demo: "https://blog-project-1-wrg1.onrender.com",
   },
   {
     id: 3,
@@ -30,7 +30,7 @@ export const projects = [
     },
     technologies: ["Node.js", "Express", "MySQL", "JWT", "Docker"],
     github: "https://github.com/GioTaipe/E-commerce",
-    demo: "https://e-commerce-1-ap6o.onrender.com/",
+    demo: "https://e-commerce-2491752jl-giotaipes-projects.vercel.app/",
   },
   {
     id: 4,

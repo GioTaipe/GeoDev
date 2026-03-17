@@ -28,7 +28,7 @@ function Navbar() {
             href="/CV_Geovanny_Tipan.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden md:flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-sm font-medium hover:bg-indigo-500 hover:text-white transition-all duration-300"
+            className="flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-sm font-medium hover:bg-indigo-500 hover:text-white transition-all duration-300"
           >
             <Download size={16} />
             <span>{t("navbar", "downloadCV")}</span>
