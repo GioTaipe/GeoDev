@@ -9,7 +9,7 @@ function Footer() {
           Geo
         </p>
         <p className="text-[11px] font-mono text-zinc-400">
-          © 2026 · made with care in Bilbao
+          © 2026 · made with care in Barcelona
         </p>
       </div>
     </footer>
