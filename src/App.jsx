@@ -1,4 +1,4 @@
-import Navbar from "./components/layout/Navbar";
+import TopNav from "./components/layout/TopNav";
 import Header from "./components/Header";
 import Projects from "./components/Projects";
 import Experience from "./components/Experience";
@@ -9,35 +9,36 @@ import Footer from "./components/layout/Footer";
 
 function App() {
   return (
-    <div className="flex flex-col items-center bg-[#0d1117] min-h-screen w-full">
-      {/* Fondo Ambiental (Aurora Gradients - No Grid) */}
-      <div className="fixed inset-0 pointer-events-none">
-        {/* Círculo superior derecho (Indigo) */}
-        <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-indigo-600/10 rounded-full blur-[120px] animate-pulse" />
-        {/* Círculo inferior izquierdo (Blue) */}
-        <div className="absolute bottom-[-10%] left-[-10%] w-[600px] h-[600px] bg-blue-600/10 rounded-full blur-[120px]" />
-      </div>
-      <Navbar />
-      <Header />
-      <Projects />
-      <section className="w-full max-w-full py-20">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-          {/* Columna Izquierda */}
-          <div className="flex flex-col gap-12">
-            {" "}
-            {/* Gap para separar Experiencia de Skills */}
-            <Experience />
-            <Skills />
-          </div>
+    <div className="min-h-screen" style={{ backgroundColor: "var(--bg)" }}>
+      <TopNav />
 
-          {/* Columna Derecha */}
-          <div>
-            <Education />
-          </div>
-        </div>
-      </section>
-      <Contact />
-      <Footer />
+      <main>
+        <section id="hero">
+          <Header />
+        </section>
+
+        <section id="projects" className="scroll-mt-24">
+          <Projects />
+        </section>
+
+        <section id="experience" className="scroll-mt-24">
+          <Experience />
+        </section>
+
+        <section id="skills" className="scroll-mt-24">
+          <Skills />
+        </section>
+
+        <section id="education" className="scroll-mt-24">
+          <Education />
+        </section>
+
+        <section id="contact" className="scroll-mt-24">
+          <Contact />
+        </section>
+
+        <Footer />
+      </main>
     </div>
   );
 }

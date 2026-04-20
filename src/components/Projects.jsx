@@ -1,39 +1,44 @@
 import { projects } from "../data/projects";
 import ProjectCard from "./ProjectCard";
-import { FolderGit2 } from "lucide-react";
+import SectionHeading from "./SectionHeading";
 import { useLanguage } from "../context/LanguageContext";
+import { useInView } from "../hooks/useInView";
 
 function Projects() {
   const { lang, t } = useLanguage();
+  const [ref, inView] = useInView();
 
   return (
-    <section className="w-full max-w-full px-6 md:px-12">
-      {/* Contenedor centrado */}
-      <div className="flex justify-between border-b border-white/5 pb-4">
-        {/* Título */}
-        <h2 className="text-2xl text-white font-mono gap-2 flex items-center">
-          <FolderGit2 className="text-indigo-500" />
-          {t("projects", "title")}
-        </h2>
-        <div className="text-xs font-mono text-slate-500 hidden sm:block">
-          git {t("projects", "branch")}: <span className="text-indigo-400">main</span>
-        </div>
-      </div>
-      {/* Grid de proyectos */}
-      <div className="grid gap-6 sm:grid-cols-4">
-        {projects.map((project) => (
-          <ProjectCard
+    <div ref={ref} className="px-5 sm:px-8 md:px-16 py-20 sm:py-24 max-w-6xl mx-auto">
+      <SectionHeading
+        kicker="PORTFOLIO"
+        title={lang === "es" ? "Cosas que he construido" : "Things I've built"}
+        subtitle={lang === "es"
+          ? "Proyectos personales y experimentos en producción."
+          : "Side projects and production experiments."}
+        visible={inView}
+      />
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
+        {projects.map((project, i) => (
+          <div
             key={project.id}
-            title={project.title}
-            description={project.description[lang]}
-            technologies={project.technologies}
-            github={project.github}
-            demo={project.demo}
-            demoLabel={t("projects", "liveDemo")}
-          />
+            className={`reveal ${inView ? "visible" : ""}`}
+            style={{ transitionDelay: `${(i + 1) * 80}ms` }}
+          >
+            <ProjectCard
+              title={project.title}
+              description={project.description[lang]}
+              technologies={project.technologies}
+              github={project.github}
+              demo={project.demo}
+              image={project.image}
+              demoLabel={t("projects", "liveDemo")}
+            />
+          </div>
         ))}
       </div>
-    </section>
+    </div>
   );
 }
 
